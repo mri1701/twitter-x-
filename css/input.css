@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* Hide scrollbars like X/Twitter */
+.second,
+.third {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.second::-webkit-scrollbar,
+.third::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Keep the three columns from shrinking unexpectedly */
+.first,
+.second,
+.third {
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1024px) {
+
+    .first {
+        width: 80px;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .first .sidebar {
+        align-items: center;
+    }
+
+    .first .sidebar ul {
+        align-items: center;
+    }
+
+    .first .sidebar li {
+        font-size: 0;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .first .sidebar li span {
+        font-size: 24px;
+    }
+
+    .first .button button {
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+    }
+
+    .first .button button::after {
+        content: "+";
+        font-size: 28px;
+    }
+
+    .second {
+        width: calc(100% - 80px);
+    }
+
+    .third {
+        display: none;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .first {
+        width: 60px;
+    }
+
+    .first .logo svg {
+        width: 28px;
+    }
+
+    .first .sidebar li {
+        width: 48px;
+        height: 48px;
+    }
+
+    .first .sidebar li span {
+        font-size: 22px;
+    }
+
+    .first .button button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .first .button button::after {
+        font-size: 25px;
+    }
+
+    .second {
+        width: calc(100% - 60px);
+    }
+
+    .second .top {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .whatishapp {
+        gap: 8px;
+    }
+
+    .whatishapp .img {
+        width: 45px;
+        margin: 8px;
+    }
+
+    .whatishapp .img img {
+        width: 45px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .posting img {
+        width: 100%;
+    }
+}
